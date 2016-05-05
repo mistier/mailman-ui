@@ -1,0 +1,25 @@
+{
+  "name": "mailman-ui",
+  "version": "1.0.0",
+  "description": "わかりやすい mailman の web ui を提供する",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^3.7.0",
+    "nodemon": "^1.9.2"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mistier/mailman-ui.git"
+  },
+  "author": "mayok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mistier/mailman-ui/issues"
+  },
+  "homepage": "https://github.com/mistier/mailman-ui#readme"
+}
