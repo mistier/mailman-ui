@@ -1,0 +1,47 @@
+$page-width: 780px;
+$circle-radius: 120px;
+$circle-border: 1px;
+$border-color1: #0fb8ad;
+$border-color2: #1fc8bd;
+$border-color3: #2cb5e8;
+
+.container {
+  margin: 0 auto;
+  width: $page-width;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0;
+}
+.item {
+  display: table;
+  position: relative;
+  width: $circle-radius;
+  height: $circle-radius;
+  //border: 1px solid #393939;
+  border-radius: $circle-radius/2;
+  background: white;
+  //opacity: 1;
+}
+.icon {
+  display: table-cell;
+  font-size: xx-large;
+  text-align: center;
+  vertical-align: middle;
+}
+.ccircle {
+  position: absolute;
+  top: -$circle-border;
+  left: -$circle-border;
+
+  width: $circle-radius + $circle-border * 2;
+  height: $circle-radius + $circle-border * 2;
+
+  background: linear-gradient(141deg, $border-color1 0%, $border-color2 51%, $border-color3 75%);
+  border-radius: $circle-radius/2;
+  z-index: -1;
+  opacity: 0.95;
+}
