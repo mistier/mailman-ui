@@ -1,0 +1,63 @@
+$font-color: #393939;
+$background-color: #fefefe;
+$link-width: 6.5em;
+
+html, body {
+  height: 100%;
+}
+body {
+  background: $background-color;
+}
+
+.head {
+  margin: 0.67em 0 0.2em;
+	font-weight: normal;
+	line-height: 1.8;
+}
+
+.mllist {
+  &-name {
+    a {
+      display: inline-block;
+      position: relative;
+      margin: 0 0 1.2em;
+      padding: 0.5em 0 0.2em 0.1em;
+      min-width: $link-width;
+      font-size: 1.5em;
+      color: $font-color;
+
+      &:hover {
+        color: $font-color;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: $link-width;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $font-color;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+      }
+      &:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &-container {
+    width: 500px;
+    margin: 0 auto;
+
+		font-family: Baskerville;
+  }
+
+  width: 400px;
+  margin: 0 0 1em;
+  padding: 0 0 0 6em;
+}
+
