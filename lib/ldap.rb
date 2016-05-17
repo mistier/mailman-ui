@@ -15,7 +15,7 @@ conn = Net::LDAP.new :host => SERVER,
 
 conn.open do |ldap|
   treebase = BASE
-  filter = Net::LDAP::Filter.eq( "uid", "username" )
+  filter = Net::LDAP::Filter.eq( "uid", ARGV[0] )
   attrs = ["title"]
   ldap.search(:base => treebase, :filter => filter, :attributes => attrs, :return_result => false ) do |entry|
     entry.each do |attr, values|
