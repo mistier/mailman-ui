@@ -5,32 +5,34 @@
   margin: 100px 0;
 }
 .item {
-  &-border {
-    position: absolute;
-    top: -$circle-border;
-    left: -$circle-border;
-
-    width: $circle-radius + $circle-border * 2;
-    height: $circle-radius + $circle-border * 2;
-
-    background: linear-gradient(141deg, $border-color1 0%, $border-color2 51%, $border-color3 75%);
-    border-radius: $circle-radius/2;
-    z-index: -1;
-    opacity: 0.95;
-  }
-
   text-align: center;
 }
 .icon {
   &-box {
     display: table;
     position: relative;
-    width: $circle-radius;
-    height: $circle-radius;
+
+    width: $circle-radius + $circle-border * 2;
+    height: $circle-radius + $circle-border * 2;
+
+    background: linear-gradient(141deg, $border-color1 0%, $border-color2 51%, $border-color3 75%);
     border-radius: $circle-radius/2;
-    background: white;
+    opacity: 0.95;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: $circle-border;
+      left: $circle-border;
+      width: $circle-radius;
+      height: $circle-radius;
+      border-radius: $circle-radius/2;
+      background: $background-color;
+    }
   }
 
+  position: relative;
+  width: $circle-radius + $circle-border * 2;
   display: table-cell;
   font-size: xx-large;
   text-align: center;
