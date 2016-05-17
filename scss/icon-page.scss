@@ -1,0 +1,49 @@
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px 0;
+}
+.item {
+  text-align: center;
+}
+.icon {
+  &-box {
+    display: table;
+    position: relative;
+
+    width: $circle-radius + $circle-border * 2;
+    height: $circle-radius + $circle-border * 2;
+
+    background: linear-gradient(141deg, $border-color1 0%, $border-color2 51%, $border-color3 75%);
+    border-radius: $circle-radius/2;
+    opacity: 0.95;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: $circle-border;
+      left: $circle-border;
+      width: $circle-radius;
+      height: $circle-radius;
+      border-radius: $circle-radius/2;
+      background: $background-color;
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: $circle-radius + $circle-border * 2;
+      height: $circle-radius + $circle-border * 2;
+    }
+  }
+
+  position: relative;
+  width: $circle-radius + $circle-border * 2;
+  display: table-cell;
+  font-size: xx-large;
+  text-align: center;
+  vertical-align: middle;
+}
