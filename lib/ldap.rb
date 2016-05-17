@@ -68,4 +68,7 @@ class Action
     return @ml
   end
 
+  def checkMaillingList()
+    return @ml.length
+  end
 end
