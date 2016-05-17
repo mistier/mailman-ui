@@ -29,6 +29,15 @@
       border-radius: $circle-radius/2;
       background: $background-color;
     }
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: $circle-radius + $circle-border * 2;
+      height: $circle-radius + $circle-border * 2;
+    }
   }
 
   position: relative;

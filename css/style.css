@@ -341,6 +341,13 @@ textarea {
       height: 140px;
       border-radius: 70px;
       background: #fefefe; }
+    .icon-box a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 142px;
+      height: 142px; }
 
 .nav-content-wrap {
   height: 100%; }
