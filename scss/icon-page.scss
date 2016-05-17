@@ -1,15 +1,3 @@
-$page-width: 860px;
-$circle-radius: 140px;
-$circle-border: 1px;
-$border-color1: #0fb8ad;
-$border-color2: #1fc8bd;
-$border-color3: #2cb5e8;
-
-.container {
-  margin: 0 auto;
-  width: $page-width;
-}
-
 .flex-container {
   display: flex;
   justify-content: space-around;

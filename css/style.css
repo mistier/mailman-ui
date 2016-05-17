@@ -1,3 +1,25 @@
+/* Lists */
+/* icon page */
+/* management */
+/* reset */
+html, body {
+  height: 100%; }
+
+body {
+  background: #fefefe; }
+
+a {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+/* common */
+.container {
+  margin: 0 auto;
+  padding: 1em 0 0;
+  width: 860px; }
+
 /*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
 /*
  * Normalization
@@ -234,30 +256,15 @@ textarea {
   color: #ffffff;
   text-shadow: none; }
 
-a {
-  text-decoration: none; }
-
-ul li {
-  list-style: none; }
-
-html, body {
-  height: 100%; }
-
-body {
-  background: #fefefe; }
-
-.container {
-  padding: 1em 0 0; }
-
-.head {
-  margin: 0.67em 0 0.2em;
-  font-weight: normal;
-  line-height: 1.8; }
-
 .mllist {
   width: 500px;
   margin: 0 auto;
   font-family: Baskerville; }
+
+.list-head {
+  margin: 0.67em 0 0.2em;
+  font-weight: normal;
+  line-height: 1.8; }
 
 .lists {
   width: 400px;
@@ -291,10 +298,6 @@ body {
     visibility: visible;
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
-
-.container {
-  margin: 0 auto;
-  width: 860px; }
 
 .flex-container {
   display: -webkit-box;
@@ -336,9 +339,6 @@ body {
     height: 140px;
     border-radius: 70px;
     background: white; }
-
-html {
-  height: 100%; }
 
 .nav-content-wrap {
   height: 100%; }
