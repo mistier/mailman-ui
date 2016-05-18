@@ -5,10 +5,7 @@ require './lib/ldap.rb'
 
 cgi = CGI.new
 
-mllist = Action.new
-mllist.setUser(cgi.remote_user)
-mllist.listML
-
+ml = LDAPAction.getML cgi.remote_user
 
 content = <<EOS
 <html>
@@ -16,13 +13,13 @@ content = <<EOS
   </head>
   <body>
     <h1>Welcome <%= cgi.remote_user %> </h1>
-    <% if mllist.checkMaillingList then %>
+    <% if ml %>
     <table>
       <tr>
         <th> mailling list </th>
       </tr>
-      <% mllist.getMailingList.each do |ml| %>
-        <tr><td><%= ml %></td></tr>
+      <% ml.each do |mail| %>
+        <tr><td><%= mail %></td></tr>
       <% end %>
      </table>
     <% else %>
