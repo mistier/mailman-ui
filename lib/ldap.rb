@@ -26,16 +26,13 @@ module LDAPAction
       filter = Net::LDAP::Filter.eq("uid", username)
       attrs = ["title"]
       ldap.search(:base => treebase, :filter => filter, :attributes => attrs, :return_result => false ) do |entry|
-        entry.each do |attr, values|
-          values.each do |value|
+          entry.title.each do |value|
             if /^ml-/ =~ value then
               ml = value.sub(/^ml-/,"").sub(/-admin$/,"")
               mllist << ml
-            elsif /^uid=/ =~ value then
             else
             end
           end
-        end
       end
     end
 
@@ -60,15 +57,15 @@ class Action
     @user = username
   end
 
-  def listML()
+  def listML
     @ml = getML(@user)
   end
 
-  def getMailingList()
+  def getMailingList
     return @ml
   end
 
-  def checkMaillingList()
+  def checkMaillingList
     if @ml then
       return true
     else
