@@ -61,7 +61,7 @@ class Action
   end
 
   def listML()
-   @ml = getML(@user)
+    @ml = getML(@user)
   end
 
   def getMailingList()
@@ -69,6 +69,10 @@ class Action
   end
 
   def checkMaillingList()
-    return @ml.length
+    if @ml then
+      return true
+    else
+      return false
+    end
   end
 end
