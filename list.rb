@@ -1,16 +1,35 @@
 #!/usr/local/bin/ruby
 require 'erb'
+require 'cgi'
 require './lib/ldap.rb'
 
+cgi = CGI.new
+
 mllist = Action.new
-mllist.setUser("username")
+mllist.setUser(cgi.remote_user)
 mllist.listML
 
-contents = <<EOS
-<% mllist.getMailingList.each do |ml| %>
-<li><%= ml %></li>
-<% end %>
+
+content = <<EOS
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Welcome <%= cgi.remote_user %> </h1>
+    <% if mllist.checkMaillingList then %>
+    <table>
+      <tr>
+        <th> mailling list </th>
+      </tr>
+      <% mllist.getMailingList.each do |ml| %>
+        <tr><td><%= ml %></td></tr>
+      <% end %>
+     </table>
+    <% else %>
+      <h2> no data </h2>
+    <% end %>
+  </body>
 EOS
 
-html = ERB.new(contents)
-puts html.result(binding)
+html = ERB.new(content)
+cgi.out({'charset'=> 'utf-8' }) { html.result(binding) }
