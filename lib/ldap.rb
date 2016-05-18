@@ -9,7 +9,7 @@ $PASSWORD = 'password'
 
 module LDAPAction
   def getML(username)
-    
+
     # Connet to LDAP
     conn = Net::LDAP.new :host => $SERVER,
                          :port => $PORT,
@@ -32,32 +32,5 @@ module LDAPAction
       end
     end
   end
+  module_function :getML
 end
-
-class Action
-  include LDAPAction
-
-  def initialize()
-    @user = ''
-    @ml = []
-  end
-
-  def setUser(username)
-    @user = username
-  end
-
-  def listML
-    @ml = getML(@user)
-  end
-
-  def getMailingList
-    return @ml
-  end
-
-  def checkMaillingList
-    if @ml then
-      return true
-    else
-      return false
-    end
-  end
