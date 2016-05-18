@@ -9,9 +9,7 @@ $PASSWORD = 'password'
 
 module LDAPAction
   def getML(username)
-
-    # ml list
-    mllist = []
+    
     # Connet to LDAP
     conn = Net::LDAP.new :host => $SERVER,
                          :port => $PORT,
@@ -26,21 +24,12 @@ module LDAPAction
       filter = Net::LDAP::Filter.eq("uid", username)
       attrs = ["title"]
       ldap.search(:base => treebase, :filter => filter, :attributes => attrs, :return_result => false ) do |entry|
-          entry.title.each do |value|
-            if /^ml-/ =~ value then
-              ml = value.sub(/^ml-/,"").sub(/-admin$/,"")
-              mllist << ml
-            else
-            end
-          end
+        if entry.attribute_names.include?(:title) then
+          return entry.title.map{|value| value.sub(/^ml-/,"").sub(/-admin$/,"")}
+        else
+          return false
+        end
       end
-    end
-
-    # check ml
-    if mllist.length > 0 then
-      return mllist
-    else
-      return false
     end
   end
 end
@@ -72,4 +61,3 @@ class Action
       return false
     end
   end
-end
