@@ -1,5 +1,47 @@
-$my-color: #393939;
+/* Lists */
+$font-color: #393939;
+$background-color: #fefefe;
+$link-width: 6.5em;
 
-body {
-  color: $my-color;
+/* icon page */
+$page-width: 860px;
+$circle-radius: 140px;
+$circle-border: 1px;
+$border-color1: #0fb8ad;
+$border-color2: #1fc8bd;
+$border-color3: #2cb5e8;
+
+/* management */
+$mgmt-header: 78px;
+$mgmt-nav-width: 300px;
+$nav-padding-side: 1.4em;
+$mgmt-padding-top: 1.6em;
+
+
+/* reset */
+html, body {
+  height: 100%;
 }
+body {
+  background: $background-color;
+}
+
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+
+/* common */
+.container {
+  margin: 0 auto;
+  padding: 1em 0 0;
+  width: $page-width;
+}
+
+$root-line-height: 1;
+@import 'node_modules/sanitize.css/lib/sanitize.scss';
+@import "lists";
+@import "icon-page";
+@import "management";
