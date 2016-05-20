@@ -1,3 +1,6 @@
+html {
+  height: 100%; }
+
 /*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
 /*
  * Normalization
@@ -234,6 +237,9 @@ textarea {
   color: #ffffff;
   text-shadow: none; }
 
+p {
+  margin-bottom: 1.34em; }
+
 .form-header {
   margin: 0.67em 0; }
 
@@ -264,9 +270,6 @@ input[type="submit"] {
   outline: none;
   font-size: 13px; }
 
-html {
-  height: 100%; }
-
 .nav-content-wrap {
   height: 100%; }
 
@@ -276,17 +279,20 @@ html {
   .mgmt-nav-logo {
     display: block;
     width: 300px;
-    margin: 0 0 0.8em;
-    padding: 1.6em 1.4em 0.8em; }
+    margin: 0 0 1.27em;
+    padding: 1.6em 0 1.6em 1.4em;
+    font-size: 1.2em; }
   .mgmt-nav-side {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     width: 300px;
+    padding: 0 0 0 1.4em;
     overflow-x: hidden;
     overflow-y: hidden;
-    min-height: 100%; }
+    min-height: 100%;
+    box-sizing: border-box; }
   .mgmt-nav-scroll {
     overflow-x: hidden;
     overflow-y: scroll;
@@ -310,3 +316,11 @@ html {
 .nav-vertical a {
   display: block;
   padding: 0.4em 1.4em; }
+
+.rst-header hr {
+  display: block;
+  margin: 3em 0 2em;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e1e4e5; }
