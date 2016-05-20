@@ -1,3 +1,18 @@
+/* reset */
+html, body {
+  height: 100%;
+}
+body {
+  background: $background-color;
+}
+
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+
 p {
   margin-bottom: 1.34em;
 }
