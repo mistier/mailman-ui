@@ -1,5 +1,17 @@
-$my-color: #393939;
+//$mgmt-header: 78px;
+$mgmt-nav-width: 300px;
+$mgmt-padding-left: 1.4em;
+$mgmt-padding-top: 1.6em;
 
-body {
-  color: $my-color;
+$border-color-white: #e1e4e5;
+//$border-color-white: #000;
+
+html {
+  height: 100%;
 }
+
+$root-line-height: 1;
+@import 'node_modules/sanitize.css/lib/sanitize.scss';
+@import 'reset';
+@import 'members';
+@import 'management';
