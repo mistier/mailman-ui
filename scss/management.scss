@@ -7,8 +7,9 @@
     &-logo {
       display: block;
       width: $mgmt-nav-width;
-      margin: 0 0 0.8em;
-      padding: $mgmt-padding-top $nav-padding-side $mgmt-padding-top / 2;
+      margin: 0 0 1.27em;
+      padding: $mgmt-padding-top 0 $mgmt-padding-top $mgmt-padding-left;
+      font-size: 1.2em;
     }
 
     &-side {
@@ -17,9 +18,11 @@
       bottom: 0;
       left: 0;
       width: $mgmt-nav-width;
+      padding: 0 0 0 $mgmt-padding-left;
       overflow-x: hidden;
       overflow-y: hidden;
       min-height: 100%;
+      box-sizing: border-box;
     }
 
     &-scroll {
@@ -55,7 +58,27 @@
   }
   a {
     display: block;
-    padding: 0.4em $nav-padding-side;
+    padding: 0.4em $mgmt-padding-left;
   }
 }
 
+.rst {
+  &-container {
+
+  }
+
+  &-header {
+    hr {
+      display: block;
+      margin: 3em 0 2em;
+      padding: 0;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid $border-color-white;
+    }
+  }
+
+  &-content {
+
+  }
+}

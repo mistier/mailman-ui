@@ -14,24 +14,10 @@ $border-color3: #2cb5e8;
 /* management */
 $mgmt-header: 78px;
 $mgmt-nav-width: 300px;
-$nav-padding-side: 1.4em;
+$mgmt-padding-left: 1.4em;
 $mgmt-padding-top: 1.6em;
 
-
-/* reset */
-html, body {
-  height: 100%;
-}
-body {
-  background: $background-color;
-}
-
-a {
-  text-decoration: none;
-}
-ul li {
-  list-style: none;
-}
+$border-color-white: #e1e4e5;
 
 /* common */
 .container {
@@ -42,6 +28,8 @@ ul li {
 
 $root-line-height: 1;
 @import 'node_modules/sanitize.css/lib/sanitize.scss';
+@import 'reset';
 @import "lists";
 @import "icon-page";
+@import 'members';
 @import "management";
